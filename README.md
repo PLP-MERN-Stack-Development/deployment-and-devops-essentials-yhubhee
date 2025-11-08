@@ -75,3 +75,18 @@ Your work will be automatically submitted when you push to your GitHub Classroom
 - [Railway Documentation](https://docs.railway.app/)
 - [Vercel Documentation](https://vercel.com/docs)
 - [Netlify Documentation](https://docs.netlify.com/) 
+
+
+<!-- Answers -->
+
+## 🌐 Deployment URLs
+- Frontend: https://your-frontend-url.vercel.app
+- Backend: https://your-backend-url.onrender.com
+
+## 🧰 CI/CD & Monitoring
+- GitHub Actions for build/test/deploy
+- Uptime monitoring with UptimeRobot
+- Error tracking via Sentry (optional)
+- Health endpoint: `/api/health`
+
+

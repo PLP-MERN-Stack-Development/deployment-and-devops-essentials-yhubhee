@@ -96,3 +96,4 @@ Learn how to deploy a full MERN stack application to production, implement CI/CD
    - Documentation of your monitoring setup
 7. Your submission will be automatically graded based on the criteria in the autograding configuration
 8. The instructor will review your submission after the autograding is complete 
+

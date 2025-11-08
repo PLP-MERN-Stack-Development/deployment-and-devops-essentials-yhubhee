@@ -1,0 +1,44 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: |
+          cd server && npm install
+          cd ../client && npm install
+
+      - name: Build frontend
+        run: |
+          cd client && npm run build
+
+      - name: Run backend tests (optional)
+        run: |
+          cd server && npm test
+
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Deploy backend to Render (example)
+        run: echo "Trigger Render deploy via webhook or CLI"
+
+      - name: Deploy frontend to Vercel (example)
+        run: echo "Trigger Vercel deploy via webhook or CLI"
